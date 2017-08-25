@@ -14,4 +14,9 @@ public interface AuthClient {
     ResponseEntity<String> login(@RequestParam("user") String user,
                                  @RequestParam("pass") String pass);
 
+    @PostMapping(value = "/register")
+    ResponseEntity<String> register(@RequestParam("user") String user,
+                                    @RequestParam("pass") String pass,
+                                    @RequestParam("email") String email);
+
 }
